@@ -1,0 +1,7 @@
+{
+  "name": "alumnosApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
