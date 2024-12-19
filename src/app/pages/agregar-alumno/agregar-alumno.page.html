@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="alumnoForm" (ngSubmit)="agregar()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input formControlName="nombre" type="text" required ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Edad</ion-label>
+        <ion-input formControlName="edad" type="number" required ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Curso</ion-label>
+        <ion-input formControlName="curso" type="text" required ></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" type="submit" [disabled]="!alumnoForm.valid">Agregar</ion-button>
+    <ion-button expand="full" color="medium" (click)="cancelar()">Cancelar</ion-button>
+  </form>
+</ion-content>
